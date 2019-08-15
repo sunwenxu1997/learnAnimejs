@@ -16,10 +16,34 @@ let newRouter = new Router({
       meta: { title: 'anmine.js入门-1' }
     },
     {
+      path: '/Animejs_2',
+      name: 'Animejs_2',
+      component: resolve => require(['../components/page/Animejs_2'], resolve),
+      meta: { title: 'anmine.js入门-2' }
+    },
+    {
+      path: '/Animejs_3',
+      name: 'Animejs_3',
+      component: resolve => require(['../components/page/Animejs_3'], resolve),
+      meta: { title: 'anmine.js入门-3' }
+    },
+    {
       path: '/Animejs_1_1',
       name: 'Animejs_1_1',
       component: resolve => require(['../components/example/Animejs_1_1'], resolve),
       meta: { title: '数字加载效果',example:true }
+    },
+    {
+      path: '/Animejs_2_1',
+      name: 'Animejs_2_1',
+      component: resolve => require(['../components/example/Animejs_2_1'], resolve),
+      meta: { title: '烟花效果',example:true }
+    },
+    {
+      path: '/Animejs_2_2',
+      name: 'Animejs_2_2',
+      component: resolve => require(['../components/example/Animejs_2_2'], resolve),
+      meta: { title: '文字效果',example:true }
     },
   ]
 })
