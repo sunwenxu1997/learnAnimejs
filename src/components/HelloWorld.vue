@@ -1,113 +1,49 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <ol>
+      基础学习
+      <li v-show="index != 0 && !i.meta.example" v-for="(i,index) in list" :key="index" @click="skip(i.name)">{{i.meta.title}}</li>
+    </ol>
+    <ol>
+      实例应用
+      <li v-show="index != 0 && i.meta.example" v-for="(i,index) in list" :key="index" @click="skip(i.name)">{{i.meta.title}}</li>
+    </ol>
   </div>
 </template>
 
 <script>
+import newRouter from '@/router/index.js'
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: "Vue.js and Anime.js",
+      list:newRouter.options.routes,
+    };
+  },
+  methods:{
+    skip(name){
+      this.$router.push({
+        name:name
+      })
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
+ol{
+  display: inline-block;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+  color: #1c8a65;
+  cursor: pointer;
+
 }
-a {
-  color: #42b983;
+li:hover{
+  text-decoration: underline;
+    font-weight: bold;
 }
 </style>
