@@ -36,6 +36,7 @@ export default {
 <style scoped>
 ol{
   display: inline-block;
+  margin: 40px;
 }
 li {
   color: #1c8a65;

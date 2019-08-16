@@ -57,6 +57,12 @@ let newRouter = new Router({
       component: resolve => require(['../components/example/Animejs_4_1'], resolve),
       meta: { title: '网格波纹效果',example:true }
     },
+    {
+      path: '/Animejs_4_2',
+      name: 'Animejs_4_2',
+      component: resolve => require(['../components/example/Animejs_4_2'], resolve),
+      meta: { title: '水波纹效果',example:true }
+    },
   ]
 })
 export default newRouter
