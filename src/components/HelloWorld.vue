@@ -5,10 +5,10 @@
       基础学习
       <li v-show="index != 0 && !i.meta.example" v-for="(i,index) in list" :key="index" @click="skip(i.name)">{{i.meta.title}}</li>
     </ol>
-    <ol>
+    <ul>
       实例应用
       <li v-show="index != 0 && i.meta.example" v-for="(i,index) in list" :key="index" @click="skip(i.name)">{{i.meta.title}}</li>
-    </ol>
+    </ul>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ol{
+ol,ul{
   display: inline-block;
   margin: 40px;
 }

@@ -34,34 +34,40 @@ let newRouter = new Router({
       meta: { title: 'anmine.js入门-4' }
     },
     {
+      path: '/Animejs_5',
+      name: 'Animejs_5',
+      component: resolve => require(['../components/page/Animejs_5'], resolve),
+      meta: { title: 'anmine.js入门-5' }
+    },
+    {
       path: '/Animejs_1_1',
       name: 'Animejs_1_1',
       component: resolve => require(['../components/example/Animejs_1_1'], resolve),
-      meta: { title: '数字加载效果',example:true }
+      meta: { title: '1.1数字加载效果',example:true }
     },
     {
       path: '/Animejs_2_1',
       name: 'Animejs_2_1',
       component: resolve => require(['../components/example/Animejs_2_1'], resolve),
-      meta: { title: '烟花效果',example:true }
+      meta: { title: '2.1烟花效果',example:true }
     },
     {
       path: '/Animejs_2_2',
       name: 'Animejs_2_2',
       component: resolve => require(['../components/example/Animejs_2_2'], resolve),
-      meta: { title: '文字效果',example:true }
+      meta: { title: '2.2文字效果',example:true }
     },
     {
       path: '/Animejs_4_1',
       name: 'Animejs_4_1',
       component: resolve => require(['../components/example/Animejs_4_1'], resolve),
-      meta: { title: '网格波纹效果',example:true }
+      meta: { title: '4.1网格波纹效果',example:true }
     },
     {
       path: '/Animejs_4_2',
       name: 'Animejs_4_2',
       component: resolve => require(['../components/example/Animejs_4_2'], resolve),
-      meta: { title: '水波纹效果',example:true }
+      meta: { title: '4.2水波纹效果',example:true }
     },
   ]
 })
