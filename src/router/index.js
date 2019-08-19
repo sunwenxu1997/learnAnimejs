@@ -64,6 +64,12 @@ let newRouter = new Router({
       meta: { title: 'anmine.js入门-9' }
     },
     {
+      path: '/Animejs_10',
+      name: 'Animejs_10',
+      component: resolve => require(['../components/page/Animejs_10'], resolve),
+      meta: { title: 'anmine.js入门-10' }
+    },
+    {
       path: '/Animejs_1_1',
       name: 'Animejs_1_1',
       component: resolve => require(['../components/example/Animejs_1_1'], resolve),
