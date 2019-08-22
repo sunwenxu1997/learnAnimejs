@@ -99,6 +99,24 @@ let newRouter = new Router({
       component: resolve => require(['../components/example/Animejs_4_2'], resolve),
       meta: { title: '4.2水波纹效果',example:true }
     },
+    {
+      path: '/Animejs_4_3',
+      name: 'Animejs_4_3',
+      component: resolve => require(['../components/example/Animejs_4_3'], resolve),
+      meta: { title: '4.3制定网格文字',example:true }
+    },
+    {
+      path: '/Animejs_4_4',
+      name: 'Animejs_4_4',
+      component: resolve => require(['../components/example/Animejs_4_4'], resolve),
+      meta: { title: '4.4展示网格文字',example:true }
+    },
+    {
+      path: '/Animejs_10_1',
+      name: 'Animejs_10_1',
+      component: resolve => require(['../components/example/Animejs_10_1'], resolve),
+      meta: { title: '100个点',example:true }
+    },
   ]
 })
 export default newRouter
