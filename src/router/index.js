@@ -117,6 +117,24 @@ let newRouter = new Router({
       component: resolve => require(['../components/example/Animejs_10_1'], resolve),
       meta: { title: '100个点',example:true }
     },
+    {
+      path: '/Animejs_8_1',
+      name: 'Animejs_8_1',
+      component: resolve => require(['../components/example/Animejs_8_1'], resolve),
+      meta: { title: '滑尺',example:true }
+    },
+    {
+      path: '/Animejs_10_2',
+      name: 'Animejs_10_2',
+      component: resolve => require(['../components/example/Animejs_10_2'], resolve),
+      meta: { title: '滑尺+',example:true }
+    },
+    {
+      path: '/Animejs_10_3',
+      name: 'Animejs_10_3',
+      component: resolve => require(['../components/example/Animejs_10_3'], resolve),
+      meta: { title: '圆环加载',example:true }
+    },
   ]
 })
 export default newRouter
