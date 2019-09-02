@@ -135,6 +135,12 @@ let newRouter = new Router({
       component: resolve => require(['../components/example/Animejs_10_3'], resolve),
       meta: { title: '圆环加载',example:true }
     },
+    {
+      path: '/Animejs_10_4',
+      name: 'Animejs_10_4',
+      component: resolve => require(['../components/example/Animejs_10_4'], resolve),
+      meta: { title: '实列介绍',example:true }
+    },
   ]
 })
 export default newRouter

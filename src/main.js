@@ -6,6 +6,7 @@ import router from './router'
 import './assets/css/index.scss'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import 'swiper/dist/css/swiper.css';
 Vue.use(ElementUI, { size: 'small' });
 Vue.config.productionTip = false
 /* eslint-disable no-new */

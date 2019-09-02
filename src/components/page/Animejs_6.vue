@@ -33,32 +33,32 @@ export default {
   },
   methods: {
     runAmine() {
-      //1.动画控制
-      //   this.animation = anime({
-      //     targets: ".play-pause-demo .el",
-      //     translateX: 270,
-      //     delay: function(el, i) {
-      //       return i * 100;
-      //     },
-      //     direction: "alternate",
-      //     loop: true,
-      //     autoplay: false, //是否允许自动播放
-      //     easing: "easeInOutSine"
-      //   });
+      // 1.动画控制
+        this.animation = anime({
+          targets: ".play-pause-demo .el",
+          translateX: 270,
+          delay: function(el, i) {
+            return i * 100;
+          },
+          direction: "alternate",
+          loop: true,
+          autoplay: false, //是否允许自动播放
+          easing: "easeInOutSine"
+        });
 
-      //   this.$refs["play"].onclick = this.animation.play; //开始
-      //   this.$refs["pause"].onclick = this.animation.pause; //暂停
-      //   this.$refs["restart"].onclick = this.animation.restart; //重新开始
-      //   this.$refs["reverse"].onclick = this.animation.reverse; //反转方向
+        this.$refs["play"].onclick = this.animation.play; //开始
+        this.$refs["pause"].onclick = this.animation.pause; //暂停
+        this.$refs["restart"].onclick = this.animation.restart; //重新开始
+        this.$refs["reverse"].onclick = this.animation.reverse; //反转方向
 
       // 2.seek瞬移 animation.seek(timeStamp);跳转到特定时间  
-      this.animation = anime({
-        targets: ".seek-anim-demo",
-        translateX: 270,
-        easing: "linear",
-        autoplay:false
-      });
-      this.animation.seek(this.animation.duration * (this.value / 100));
+      // this.animation = anime({
+      //   targets: ".seek-anim-demo",
+      //   translateX: 270,
+      //   easing: "linear",
+      //   autoplay:false
+      // });
+      // this.animation.seek(this.animation.duration * (this.value / 100));
     }
   }
 };
