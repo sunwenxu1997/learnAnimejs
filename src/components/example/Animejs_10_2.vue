@@ -1,10 +1,10 @@
 <template>
   <div class="overall" >
     <div class="box" ref="box">
-      <div class="dot" ref="dot" :style="0<plan && plan<100?'top:10px':'top:0'"></div>
+      <div class="dot" ref="dot"></div>
       <div class="scale-box">
         <span
-          :class="plan==index ?'scaleT':'scale'"
+          class="scale"
           v-for="(i,index) in 101"
           :key="index"
           :style="index%10 == 0?'height:15px':''"
@@ -24,51 +24,34 @@ export default {
       bck: 0 //进度背景
     };
   },
-  watch: {
-    plan() {
-      this.runAnime();
-    }
-  },
   mounted() {
-    this.getZoom("box", "dot");
+     this.runAnime();
   },
   methods: {
-    getZoom(d1, d2) {
-      var _this = this;
-      var oDiv1 = this.$refs[d1];
-      var oDiv2 = this.$refs[d2];
-      oDiv2.onmousedown = function(ev) {
-        ev.preventDefault();
-        //鼠标按下位置
-        var oEvent = ev || event;
-        var disX =  Math.floor(oEvent.clientX - oDiv2.offsetLeft);
-        document.onmousemove = function(ev) {
-          var oEvent = ev || event;
-          var l = Math.floor(oEvent.clientX - disX);
-
-          if (l < 0) {
-            l = 0;
-          } else if (l > oDiv1.offsetWidth - oDiv2.offsetWidth) {
-            l = oDiv1.offsetWidth - oDiv2.offsetWidth;
-          }
-          _this.plan = Math.floor(Number( (l / ((oDiv1.offsetWidth - oDiv2.offsetWidth) / 100))));
-          _this.bck = l;
-          oDiv2.style.left = l + "px"; //l范围：[0,580]
-          console.log(_this.plan)
-        };
-        document.onmouseup = function() {
-          document.onmousemove = null;
-          document.onmouseup = null;
-        };
-      };
-    },
     runAnime() {
-      anime({
-        targets: ".scaleT",
-        direction:'easeInOutSine',
-        // duration: 100,
-        translateY:5
+       let tl = anime.timeline({
+      duration:100,
+      complete: function() {
+          tl.restart(); //重新开始
+        }
+    });
+    
+    function createEl(i) {
+      let el = document.getElementsByClassName("scale")[i];
+      tl.add({
+        begin: function() {
+          anime({
+            targets: el,
+            translateY: 25,
+            opacity:1,
+            scale: 1.3,
+            easing: "easeInOutSine",
+            direction: "alternate",
+          });
+        }
       });
+    }
+    for (let i = 0; i < 100; i++) createEl(i);
     }
   }
 };
@@ -128,7 +111,6 @@ export default {
     width: 1px;
     height: 10px;
     background: #5f5f5f;
-    transform: translateY(0) !important;
   }
   .scaleT {
     display: inline-block;

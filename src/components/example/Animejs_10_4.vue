@@ -46,18 +46,6 @@
             ></div>
           </section>
         </div>
-        <div class="swiper-slide" style="background:hsl(0, 0%, 85%)">
-          <div class="title">6.回调函数(complete,begin)</div>
-          <section class="box-content" style="width:200px;height:200px">
-            <div
-              id="dot"
-              class="dot5"
-              v-for="i in 5"
-              :key="i"
-              :style="`background:hsl(165, ${65-(i*8)}%, 45%);z-index:${10-i};`"
-            ></div>
-          </section>
-        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -230,7 +218,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: hsl(59, 100%, 50%);
+//   background: hsl(59, 100%, 50%);
 }
 .swiper-slide {
   display: flex;

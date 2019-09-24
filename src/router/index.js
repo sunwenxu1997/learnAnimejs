@@ -141,6 +141,12 @@ let newRouter = new Router({
       component: resolve => require(['../components/example/Animejs_10_4'], resolve),
       meta: { title: '实列介绍',example:true }
     },
+    {
+      path: '/Others_1',
+      name: 'Others_1',
+      component: resolve => require(['../components/example/Others_1'], resolve),
+      meta: { title: '喜迎国庆',example:true }
+    },
   ]
 })
 export default newRouter

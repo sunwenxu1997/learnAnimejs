@@ -57,7 +57,7 @@ export default {
 .text {
   display: inline-block;
   padding: 5px;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
 }
 </style>
