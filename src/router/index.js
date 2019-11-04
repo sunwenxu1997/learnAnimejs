@@ -142,10 +142,22 @@ let newRouter = new Router({
       meta: { title: '实列介绍',example:true }
     },
     {
-      path: '/Others_1',
-      name: 'Others_1',
-      component: resolve => require(['../components/example/Others_1'], resolve),
+      path: '/Animejs_10_5',
+      name: 'Animejs_10_5',
+      component: resolve => require(['../components/example/Animejs_10_5'], resolve),
       meta: { title: '喜迎国庆',example:true }
+    },
+    {
+      path: '/other_1',
+      name: 'other_1',
+      component: resolve => require(['../components/example/other_1'], resolve),
+      meta: { title: '水滴背景效果',example:true }
+    },
+    {
+      path: '/other',
+      name: 'other',
+      component: resolve => require(['../components/example/other'], resolve),
+      meta: { title: '其它',example:true }
     },
   ]
 })
