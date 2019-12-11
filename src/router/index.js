@@ -148,6 +148,12 @@ let newRouter = new Router({
       meta: { title: '喜迎国庆',example:true }
     },
     {
+      path: '/Animejs_run',
+      name: 'Animejs_run',
+      component: resolve => require(['../components/example/Animejs_run'], resolve),
+      meta: { title: '小人奔跑动画',example:true }
+    },
+    {
       path: '/other_1',
       name: 'other_1',
       component: resolve => require(['../components/example/other_1'], resolve),
