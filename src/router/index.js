@@ -160,6 +160,12 @@ let newRouter = new Router({
       meta: { title: '水滴背景效果',example:true }
     },
     {
+      path: '/Animejs_SVG',
+      name: 'Animejs_SVG',
+      component: resolve => require(['../components/example/Animejs_SVG'], resolve),
+      meta: { title: 'SVG变换动画',example:true }
+    },
+    {
       path: '/other',
       name: 'other',
       component: resolve => require(['../components/example/other'], resolve),
