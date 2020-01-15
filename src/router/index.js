@@ -166,6 +166,18 @@ let newRouter = new Router({
       meta: { title: 'SVG变换动画',example:true }
     },
     {
+      path: '/Animejs_2020',
+      name: 'Animejs_2020',
+      component: resolve => require(['../components/example/Animejs_2020'], resolve),
+      meta: { title: '2020变换动画',example:true }
+    },
+    {
+      path: '/Animejs_charge',
+      name: 'Animejs_charge',
+      component: resolve => require(['../components/example/Animejs_charge'], resolve),
+      meta: { title: '手机充电动画',example:true }
+    },
+    {
       path: '/other',
       name: 'other',
       component: resolve => require(['../components/example/other'], resolve),
