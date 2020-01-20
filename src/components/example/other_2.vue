@@ -111,7 +111,7 @@ export default {
     //         "m57.63158,0.7648l-57.10526,-0.23848l0,398.94736l56.8421,0c0.08772,-132.90296 0.17544,-265.80592 0.26316,-398.70888z"
     //     }
     //   ],
-    //   duration: 10000,
+    //   duration: 5000,
     //   loop: true
     // });
   },
@@ -164,13 +164,9 @@ export default {
               _this.path_open = true;
               anime({
                 targets: ".chat_box",
-                translateX: [
-                  { value: -160, duration: 0 },
-                  { value: 0, duration: 0 }
-                ],
+                translateX: [-160, 0],
                 opacity: 1,
-                duration: 100,
-                easing: "easeInQuad"
+                duration: 0
               });
             }
           });
