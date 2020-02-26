@@ -178,6 +178,12 @@ let newRouter = new Router({
       meta: { title: '手机充电动画', example: true }
     },
     {
+      path: '/Animejs_plan',
+      name: 'Animejs_plan',
+      component: resolve => require(['../components/example/Animejs_plan'], resolve),
+      meta: { title: 'svg进度条', example: true }
+    },
+    {
       path: '/other_2',
       name: 'other_2',
       component: resolve => require(['../components/example/other_2'], resolve),

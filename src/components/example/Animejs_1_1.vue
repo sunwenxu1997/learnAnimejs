@@ -18,8 +18,8 @@ export default {
   mounted() {
     anime({
       targets: this.battery,
-      charged: 100,
-      cycles: 130,
+      charged: 1000,
+      cycles: 3000,
       round: 1,
       easing: "linear",
       delay:500, //动画延时
