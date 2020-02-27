@@ -33,7 +33,7 @@ import anime from "animejs/lib/anime.es.js";
 export default {
   data() {
     return {
-      plan: 88
+      plan: 100
     };
   },
   mounted() {
@@ -73,6 +73,6 @@ svg {
   top: 0;
 }
 svg ellipse {
-  /* stroke-width: 5px; */
+  stroke-linecap: round;
 }
 </style>
