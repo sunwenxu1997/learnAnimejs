@@ -135,7 +135,7 @@ export default {
     width: 100%;
     height: 100%;
     perspective: 500px;
-    animation: fadeIn 1s ease both 1;
+    animation: fadeIn 1s 0.5s ease both 1;
     .cloud {
       transform-style: preserve-3d;
       transform-origin: 50% 100%;
