@@ -190,6 +190,12 @@ let newRouter = new Router({
       meta: { title: 'svg拖拽效果', example: true }
     },
     {
+      path: '/20200317',
+      name: '20200317',
+      component: resolve => require(['../components/example/20200317'], resolve),
+      meta: { title: 'svg数字时钟效果', example: true }
+    },
+    {
       path: '/other',
       name: 'other',
       component: resolve => require(['../components/example/other'], resolve),
